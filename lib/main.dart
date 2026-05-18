@@ -3,6 +3,7 @@ import 'screens/dashboard_screen.dart';
 import 'screens/members_screen.dart';
 import 'screens/payments_screen.dart';
 import 'screens/settings_screen.dart';
+import 'services/toast_service.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      scaffoldMessengerKey: ToastService.messengerKey,
+
       home: HomePage(),
     );
   }
